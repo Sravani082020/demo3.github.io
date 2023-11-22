@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        body{
+            height:100%;
+            background: darkblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            position: relative;
+            font-size: 60px;
+        }
+        #box span{
+            position: relative;
+            display: inline-block;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            animation:anim1 1s infinite;
+            animation-delay: calc(.1s*var(--i));
+        }
+        #box span:nth-child(2n+1){
+            transform:translateY(20px);
+        }
+        @keyframes anim1{
+            0%,100%{
+                color:red;
+            }
+            20%,80%{
+                color:blueviolet;
+            }
+            40%,60%{
+                color:greenyellow;
+            }
+            
+        }
+        </style>
+    </head>
+    <body>
+            <div id="box">
+                <span style="--i:1">S</span>
+                <span style="--i:2">R</span>
+                <span style="--i:3">A</span>
+                <span style="--i:4">V</span>
+                <span style="--i:5">A</span>
+                <span style="--i:6">N</span>
+                <span style="--i:7">I</span>
+            </div>
+    </body>
+</html>
